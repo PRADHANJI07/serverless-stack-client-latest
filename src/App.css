@@ -1,2 +1,28 @@
-.App {
+.navbar {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  /* Translucent black background */
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+  /* Set the text color to white */
+}
+
+.nav-link:hover {
+  color: lightgray !important;
+  /* Set the text color on hover */
+}
+
+/* App.css */
+
+/* App.css */
+
+.navbar-brand {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.4rem;
+  /* Adjust the desired font size */
+}
+.navbar-curved {
+  border-radius: 10px;
 }

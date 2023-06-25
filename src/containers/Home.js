@@ -66,7 +66,7 @@ export default function Home() {
           <Link to="/login" className="btn btn-info btn-lg mr-3">
             Login
           </Link>
-          <Link to="/signup" className="btn btn-success btn-lg">
+          <Link to="/signup" className="btn btn-success btn-lg btn-signup">
             Signup
           </Link>
         </div>

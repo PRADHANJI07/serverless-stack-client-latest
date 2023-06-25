@@ -39,9 +39,14 @@ function App() {
   return (
     !isAuthenticating && (
       <div className="App container py-3">
-        <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
+        <Navbar
+          collapseOnSelect
+          bg="transparent"
+          expand="md"
+          className="mb-3 navbar-curved"
+        >
           <LinkContainer to="/">
-            <Navbar.Brand className="font-weight-bold text-muted">
+            <Navbar.Brand className="font-weight-bold text-light">
               Scratch
             </Navbar.Brand>
           </LinkContainer>
@@ -51,17 +56,19 @@ function App() {
               {isAuthenticated ? (
                 <>
                   <LinkContainer to="/settings">
-                    <Nav.Link>Settings</Nav.Link>
+                    <Nav.Link className="text-light">Settings</Nav.Link>
                   </LinkContainer>
-                  <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+                  <Nav.Link className="text-light" onClick={handleLogout}>
+                    Logout
+                  </Nav.Link>
                 </>
               ) : (
                 <>
                   <LinkContainer to="/signup">
-                    <Nav.Link>Signup</Nav.Link>
+                    <Nav.Link className="text-light">Signup</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/login">
-                    <Nav.Link>Login</Nav.Link>
+                    <Nav.Link className="text-light">Login</Nav.Link>
                   </LinkContainer>
                 </>
               )}
