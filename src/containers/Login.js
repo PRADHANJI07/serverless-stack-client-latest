@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Auth } from "aws-amplify";
 import Form from "react-bootstrap/Form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoaderButton from "../components/LoaderButton";
 import { useAppContext } from "../libs/contextLib";
 import { useFormFields } from "../libs/hooksLib";
@@ -54,6 +54,9 @@ export default function Login() {
             onChange={handleFieldChange}
           />
         </Form.Group>
+        <div className="forgot-password">
+          <Link to="/login/reset">Forgot password?</Link>
+        </div>
         <LoaderButton
           block
           size="lg"
