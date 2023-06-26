@@ -45,7 +45,7 @@ export default function Signup() {
 
       setIsLoading(false);
       setNewUser(newUser);
- // Redirect after successful signup
+      // Redirect after successful signup
     } catch (e) {
       onError(e);
       setIsLoading(false);
@@ -86,7 +86,6 @@ export default function Signup() {
           block
           size="lg"
           type="submit"
-          variant="success"
           isLoading={isLoading}
           disabled={!validateConfirmationForm()}
         >
@@ -128,9 +127,9 @@ export default function Signup() {
           block
           size="lg"
           type="submit"
-          variant="success"
           isLoading={isLoading}
           disabled={!validateForm()}
+          className="custom-signup-button"
         >
           Signup
         </LoaderButton>

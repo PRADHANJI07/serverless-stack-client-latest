@@ -12,21 +12,26 @@ export default function Home() {
   const [notes, setNotes] = useState([]);
   const { isAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     async function onLoad() {
       if (!isAuthenticated) {
         return;
       }
+
       try {
         const notes = await loadNotes();
         setNotes(notes);
       } catch (e) {
         onError(e);
       }
+
       setIsLoading(false);
     }
+
     onLoad();
   }, [isAuthenticated]);
+
   function loadNotes() {
     return API.get("notes", "/notes");
   }
@@ -63,10 +68,10 @@ export default function Home() {
         <h1>Scratch</h1>
         <p className="text-muted">A simple note taking app</p>
         <div className="pt-3">
-          <Link to="/login" className="btn btn-info btn-lg mr-3">
+          <Link to="/login" className="btn btn-info btn-lg mr-3 custom-login-button">
             Login
           </Link>
-          <Link to="/signup" className="btn btn-success btn-lg btn-signup">
+          <Link to="/signup" className="btn btn-success btn-lg custom-signup-button">
             Signup
           </Link>
         </div>
@@ -82,6 +87,7 @@ export default function Home() {
       </div>
     );
   }
+
   return (
     <div className="Home">
       {isAuthenticated ? renderNotes() : renderLander()}

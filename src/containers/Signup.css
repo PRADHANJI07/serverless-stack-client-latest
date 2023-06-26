@@ -8,3 +8,16 @@
         max-width: 320px;
     }
 }
+
+/* Signup.css */
+
+.custom-signup-button {
+    background-color: #763f25e3 !important;
+    border-color: #763f25e3 !important;
+  }
+  
+  .custom-signup-button:hover {
+    background-color: #5b320f !important;
+    border-color: #5b320f !important;
+  }
+  

@@ -14,3 +14,11 @@
     display: block;
     font-size: 14px;
 }
+.Custom-login-button{
+    background-color: #1a1823 !important;
+    border-color: #1a1823 !important;
+}
+.Custom-login-button:hover{
+    background-color: #32333a !important;
+    border-color: #32333a !important;
+}
