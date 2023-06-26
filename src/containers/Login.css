@@ -1,49 +1,24 @@
-/* Home.css */
+@media all and (min-width: 480px) {
+    .Login {
+        padding: 60px 0;
+    }
 
-/* Laptop Screen Styles */
-.lander h1 {
-    font-size: 3rem;
-  }
-  
-  .custom-login-button,
-  .custom-signup-button {
-    font-size: 1.3rem;
-    padding: 8px 16px;
-  }
-  
-  .custom-login-button {
-    background-color: #1a1823;
-    border-color: #1a1823;
-  }
-  
-  .custom-login-button:hover {
-    background-color: #32333a;
-    border-color: #32333a;
-  }
-  
-  .custom-signup-button {
-    background-color: #763f25e3;
-    border-color: #763f25e3;
-  }
-  
-  .custom-signup-button:hover {
-    color: #fff !important;
-    background-color: #5b320f !important;
-    border-color: #5b320f !important;
-  }
-  
-  /* Media Queries for Phone Screens */
-  @media (max-width: 767px) {
-    .lander h1 {
-      font-size: 4rem; /* Increase the font size for the 'Scratch' heading on phone screens */
+    .Login form {
+        margin: 0 auto;
+        max-width: 320px;
     }
-  
-    .custom-login-button,
-    .custom-signup-button {
-      font-size: 1.3rem; /* Set the same font size as laptop screens */
-      padding: 8px 16px; /* Set the same padding as laptop screens */
-      display: block; /* Display the buttons one above another on phone screens */
-      margin-bottom: 10px; /* Add a small bottom margin between the buttons on phone screens */
-    }
-  }
-  
+}
+
+.Login form a {
+    margin-bottom: 15px;
+    display: block;
+    font-size: 14px;
+}
+.Custom-login-button{
+    background-color: #1a1823 !important;
+    border-color: #1a1823 !important;
+}
+.Custom-login-button:hover{
+    background-color: #32333a !important;
+    border-color: #32333a !important;
+}

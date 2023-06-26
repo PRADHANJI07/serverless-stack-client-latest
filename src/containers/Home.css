@@ -1,26 +1,47 @@
 .Home .lander {
     padding: 80px 0;
     text-align: center;
-}
-
-.Home .lander h1 {
+  }
+  
+  .Home .lander h1 {
     font-family: 'Trykker', sans-serif;
     font-weight: 600;
-}
-.custom-signup-button{
+  }
+  
+  .custom-signup-button {
     background-color: #763f25e3;
     border-color: #763f25e3;
-}
-.custom-signup-button:hover{
-    color:#fff!important ; 
+  }
+  
+  .custom-signup-button:hover {
+    color: #fff!important;
     background-color: #5b320f !important;
     border-color: #5b320f !important;
-}
-.custom-login-button{
+  }
+  
+  .custom-login-button {
     background-color: #1a1823;
     border-color: #1a1823;
-}
-.custom-login-button:hover{
+  }
+  
+  .custom-login-button:hover {
     background-color: #32333a;
     border-color: #32333a;
-}
+  }
+  
+  @media (max-width: 576px) {
+    .Home .lander {
+      padding: 40px 0;
+    }
+  
+    .Home .lander h1 {
+      font-size: 32px;
+    }
+  
+    .custom-login-button,
+    .custom-signup-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  
