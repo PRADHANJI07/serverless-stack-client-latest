@@ -8,6 +8,8 @@ body {
   font-family: "Open Sans", sans-serif;
   background-image: url("jan-kahanek-g3O5ZtRk2E4-unsplash.jpg");
   background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
 
 h1,
