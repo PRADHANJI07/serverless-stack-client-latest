@@ -2,3 +2,15 @@
     height: 300px;
     font-size: 1.5rem;
 }
+
+.saveBtn {
+    background-color: #1a1823;
+    border-color: #1a1823;
+
+}
+
+.saveBtn:hover {
+    color: #fff !important;
+    background-color: #32333a !important;
+    border-color: #32333a !important;
+}

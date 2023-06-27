@@ -1,11 +1,38 @@
-@media all and (min-width: 480px) {
-    .Settings {
-        padding: 60px 0;
-        margin: 0 auto;
-        max-width: 480px;
-    }
-
-    .Settings>.LoaderButton:first-child {
-        margin-bottom: 15px;
-    }
-}
+.Settings {
+    padding: 60px 0;
+    margin: 0 auto;
+    max-width: 480px;
+  }
+  
+  .Settings .LoaderButton {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  
+  .Settings .LoaderButton:first-child {
+    margin-bottom: 15px;
+  }
+  
+  .customEmail {
+    background-color: #1a1823 !important;
+    border-color: #1a1823 !important;
+    color: #fff;
+  }
+  
+  .customEmail:hover {
+    background-color: #32333a !important;
+    border-color: #32333a !important;
+  }
+  
+  .customPassword {
+    background-color: #763f25e3;
+    border-color: #763f25e3;
+    color: #fff;
+  }
+  
+  .customPassword:hover {
+    background-color: #5b320f;
+    border-color: #5b320f;
+  }
+  

@@ -6,6 +6,7 @@ import { useFormFields } from "../libs/hooksLib";
 import { Auth } from "aws-amplify";
 import { onError } from "../libs/errorLib";
 import "./Signup.css";
+import { FacebookLoginButton } from "react-social-login-buttons";
 import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
@@ -68,6 +69,9 @@ export default function Signup() {
       setIsLoading(false);
     }
   }
+  function handleFbLogin() {
+    userHasAuthenticated(true);
+  }
 
   function renderConfirmationForm() {
     return (
@@ -99,7 +103,7 @@ export default function Signup() {
     return (
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="email" size="lg">
-          <Form.Label>Email</Form.Label>
+          <Form.Label className="custom">Email</Form.Label>
           <Form.Control
             autoFocus
             type="email"
@@ -108,7 +112,7 @@ export default function Signup() {
           />
         </Form.Group>
         <Form.Group controlId="password" size="lg">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="custom">Password</Form.Label>
           <Form.Control
             type="password"
             value={fields.password}
@@ -116,7 +120,7 @@ export default function Signup() {
           />
         </Form.Group>
         <Form.Group controlId="confirmPassword" size="lg">
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label className="custom">Confirm Password</Form.Label>
           <Form.Control
             type="password"
             onChange={handleFieldChange}
@@ -133,13 +137,20 @@ export default function Signup() {
         >
           Signup
         </LoaderButton>
+
       </Form>
     );
   }
 
-  return (
+    return (
     <div className="Signup">
       {newUser === null ? renderForm() : renderConfirmationForm()}
+      <hr />
+      <div style={{  display: "flex", justifyContent: "center"}}>
+        <a href={`https://www.facebook.com/v13.0/dialog/oauth?client_id=1741782039633954&redirect_uri=${encodeURIComponent("https://bhabesh-notes.netlify.app/signup/callback")}`}>
+          <FacebookLoginButton size="small" onClick={handleFbLogin} />
+        </a>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import LoaderButton from "../components/LoaderButton";
 import { useAppContext } from "../libs/contextLib";
 import { useFormFields } from "../libs/hooksLib";
 import { onError } from "../libs/errorLib";
+import { FacebookLoginButton } from "react-social-login-buttons";
 import "./Login.css";
 
 export default function Login() {
@@ -34,11 +35,16 @@ export default function Login() {
     }
   }
 
+  function handleFbLogin() {
+    // Perform the Facebook login action here
+    // You can customize this function based on your requirements
+  }
+
   return (
     <div className="Login">
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email">
-          <Form.Label>Email</Form.Label>
+          <Form.Label className="custom">Email</Form.Label>
           <Form.Control
             autoFocus
             type="email"
@@ -47,14 +53,14 @@ export default function Login() {
           />
         </Form.Group>
         <Form.Group size="lg" controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="custom">Password</Form.Label>
           <Form.Control
             type="password"
             value={fields.password}
             onChange={handleFieldChange}
           />
         </Form.Group>
-        <div className="forgot-password">
+        <div className="forgot-password custom">
           <Link to="/login/reset">Forgot password?</Link>
         </div>
         <LoaderButton
@@ -67,6 +73,14 @@ export default function Login() {
         >
           Login
         </LoaderButton>
+        <hr />
+        <a
+          href={`https://www.facebook.com/v13.0/dialog/oauth?client_id=1741782039633954&redirect_uri=${encodeURIComponent(
+            "https://bhabesh-notes.netlify.app/login/callback"
+          )}`}
+        >
+          <FacebookLoginButton size="small" onClick={handleFbLogin} />
+        </a>
       </Form>
     </div>
   );

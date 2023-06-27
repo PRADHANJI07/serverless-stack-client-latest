@@ -6,6 +6,8 @@ import { onError } from "../libs/errorLib";
 import config from "../config";
 import { LinkContainer } from "react-router-bootstrap";
 import LoaderButton from "../components/LoaderButton";
+import "./Settings.css";
+
 
 export default function Settings() {
     const navigate = useNavigate();
@@ -18,12 +20,12 @@ export default function Settings() {
     return (
         <div className="Settings">
             <LinkContainer to="/settings/email">
-                <LoaderButton block bsSize="large">
+                <LoaderButton block bsSize="large" className="customEmail">
                     Change Email
                 </LoaderButton>
             </LinkContainer>
             <LinkContainer to="/settings/password">
-                <LoaderButton block bsSize="large">
+                <LoaderButton block bsSize="large" className="customPassword">
                     Change Password
                 </LoaderButton>
             </LinkContainer>

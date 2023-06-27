@@ -1,47 +1,57 @@
+/* Home.css */
 .Home .lander {
-    padding: 80px 0;
-    text-align: center;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.Home .lander h1 {
+  font-family: 'Trykker', sans-serif;
+  font-weight: 600;
+  color: black;
+  font-size: 3.1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.custom-app-description {
+  color: black !important;
+  font-size: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 4s steps(30, end) infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.custom-signup-button {
+  background-color: #763f25e3;
+  border-color: #763f25e3;
+  box-shadow:2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.custom-signup-button:hover {
+  color: #fff!important;
+  background-color: #5b320f !important;
+  border-color: #5b320f !important;
+}
+
+.custom-login-button {
+  background-color: #1a1823;
+  border-color: #1a1823;
+  box-shadow:2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.custom-login-button:hover {
+  background-color: #32333a;
+  border-color: #32333a;
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
   }
-  
-  .Home .lander h1 {
-    font-family: 'Trykker', sans-serif;
-    font-weight: 600;
+  100% {
+    width: 100%;
   }
-  
-  .custom-signup-button {
-    background-color: #763f25e3;
-    border-color: #763f25e3;
-  }
-  
-  .custom-signup-button:hover {
-    color: #fff!important;
-    background-color: #5b320f !important;
-    border-color: #5b320f !important;
-  }
-  
-  .custom-login-button {
-    background-color: #1a1823;
-    border-color: #1a1823;
-  }
-  
-  .custom-login-button:hover {
-    background-color: #32333a;
-    border-color: #32333a;
-  }
-  
-  @media (max-width: 576px) {
-    .Home .lander {
-      padding: 40px 0;
-    }
-  
-    .Home .lander h1 {
-      font-size: 32px;
-    }
-  
-    .custom-login-button,
-    .custom-signup-button {
-      padding: 10px 20px;
-      font-size: 16px;
-    }
-  }
-  
+}

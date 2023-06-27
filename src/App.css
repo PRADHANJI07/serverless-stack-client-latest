@@ -1,3 +1,5 @@
+/* App.css */
+
 .navbar {
   background-color: rgba(0, 0, 0, 0.3) !important;
   /* Translucent black background */
@@ -5,7 +7,10 @@
 
 .navbar-brand,
 .nav-link {
-  color: white !important;
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff !important;
   /* Set the text color to white */
 }
 
@@ -14,15 +19,17 @@
   /* Set the text color on hover */
 }
 
-/* App.css */
-
-/* App.css */
-
 .navbar-brand {
   font-family: 'Satisfy', cursive;
   font-size: 1.4rem;
   /* Adjust the desired font size */
 }
+
 .navbar-curved {
   border-radius: 10px;
+}
+
+.navbar .nav-link.active {
+  color: lightgray !important;
+  /* Set the text color for the active element */
 }

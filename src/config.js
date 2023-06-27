@@ -14,5 +14,8 @@ const config = {
     APP_CLIENT_ID: "3jkmonve56q3lk2tvj5ia18fdl",
     IDENTITY_POOL_ID: "us-east-1:2a1a14d4-5231-4c61-acd8-fca28dae0ae1",
   },
+  social: {
+    FB: "1741782039633954"
+    }    
 };
 export default config;

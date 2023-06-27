@@ -66,7 +66,7 @@ export default function Home() {
     return (
       <div className="lander">
         <h1>Scratch</h1>
-        <p className="text-muted">A simple note taking app</p>
+        <p className="text-muted custom-app-description typewritter">A simple note taking app</p>
         <div className="pt-3">
           <Link to="/login" className="btn btn-info btn-lg mr-3 custom-login-button">
             Login

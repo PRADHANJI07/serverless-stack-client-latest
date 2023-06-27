@@ -84,7 +84,7 @@ export default function Notes() {
         attachment: attachment || note.attachment,
       });
 
-      navigate('/'); // Change history.push("/") to navigate('/')
+      navigate('/');
     } catch (e) {
       onError(e);
       setIsLoading(false);
@@ -107,7 +107,7 @@ export default function Notes() {
 
     try {
       await deleteNote();
-      navigate('/'); // Change history.push("/") to navigate('/')
+      navigate('/');
     } catch (e) {
       onError(e);
       setIsDeleting(false);
@@ -126,7 +126,7 @@ export default function Notes() {
             />
           </Form.Group>
           <Form.Group controlId="file">
-            <Form.Label>Attachment</Form.Label>
+            <Form.Label className="custom">Attachment</Form.Label>
             {note.attachment && (
               <p>
                 <a
@@ -146,6 +146,7 @@ export default function Notes() {
             type="submit"
             isLoading={isLoading}
             disabled={!validateForm()}
+            className="saveBtn"
           >
             Save
           </LoaderButton>
@@ -155,6 +156,7 @@ export default function Notes() {
             variant="danger"
             onClick={handleDelete}
             isLoading={isDeleting}
+            className="customDel"
           >
             Delete
           </LoaderButton>
