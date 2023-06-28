@@ -7,15 +7,14 @@
 
 .navbar-brand,
 .nav-link {
-  font-family: 'Encode Sans', sans-serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff !important;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.2rem;
+  color: #ddd8d8 !important;
   /* Set the text color to white */
 }
 
 .nav-link:hover {
-  color: lightgray !important;
+  color: #ffffff !important;
   /* Set the text color on hover */
 }
 
@@ -30,6 +29,7 @@
 }
 
 .navbar .nav-link.active {
-  color: lightgray !important;
+  color: #ffffff !important;
   /* Set the text color for the active element */
+  /* Set a darker background color for the active element */
 }

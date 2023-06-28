@@ -15,6 +15,7 @@
   }
   
   .customEmail {
+    font-family: 'Kanit', sans-serif;
     background-color: #1a1823 !important;
     border-color: #1a1823 !important;
     color: #fff;
@@ -26,6 +27,7 @@
   }
   
   .customPassword {
+    font-family: 'Kanit', sans-serif;
     background-color: #763f25e3;
     border-color: #763f25e3;
     color: #fff;

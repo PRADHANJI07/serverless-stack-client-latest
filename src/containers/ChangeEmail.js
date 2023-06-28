@@ -89,6 +89,7 @@ export default function ChangeEmail() {
                     </Form.Text>
                 </FormGroup>
                 <LoaderButton
+                    className="custom-change"
                     block
                     type="submit"
                     bsSize="large"
