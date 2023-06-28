@@ -12,6 +12,7 @@ export default function Home() {
   const [notes, setNotes] = useState([]);
   const { isAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
+  const [appDescription, setAppDescription] = useState("A simple note taking app");
 
   useEffect(() => {
     async function onLoad() {
@@ -31,6 +32,16 @@ export default function Home() {
 
     onLoad();
   }, [isAuthenticated]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAppDescription("A simple note taking app");
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   function loadNotes() {
     return API.get("notes", "/notes");
@@ -66,12 +77,20 @@ export default function Home() {
     return (
       <div className="lander">
         <h1>Scratch</h1>
-        <p className="text-muted custom-app-description typewritter">A simple note taking app</p>
+        <p className="text-muted custom-app-description typewritter">
+          {appDescription}
+        </p>
         <div className="pt-3">
-          <Link to="/login" className="btn btn-info btn-lg mr-3 custom-login-button">
+          <Link
+            to="/login"
+            className="btn btn-info btn-lg mr-3 custom-login-button"
+          >
             Login
           </Link>
-          <Link to="/signup" className="btn btn-success btn-lg custom-signup-button">
+          <Link
+            to="/signup"
+            className="btn btn-success btn-lg custom-signup-button"
+          >
             Signup
           </Link>
         </div>

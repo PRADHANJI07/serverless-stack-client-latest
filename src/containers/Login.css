@@ -18,6 +18,7 @@
     font-family: 'Kanit', sans-serif;
     background-color: #1a1823 !important;
     border-color: #1a1823 !important;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
 }
 .Custom-login-button:hover{
     background-color: #32333a !important;

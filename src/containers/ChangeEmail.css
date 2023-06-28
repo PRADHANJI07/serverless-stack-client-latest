@@ -8,3 +8,12 @@
         max-width: 320px;
     }
 }
+.custom-change{
+    background-color: #232323 !important;
+    border-color: #232323 !important;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+}
+.custom-change:hover{
+    background-color: #32333a !important;
+    border-color: #32333a !important;
+}

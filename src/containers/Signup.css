@@ -16,12 +16,12 @@
 
 .custom-signup-button {
     font-family: 'Kanit', sans-serif;
-    background-color: #763f25e3 !important;
-    border-color: #763f25e3 !important;
+    background-color: #682b25    !important;
+    border-color: #682b25    !important;
   }
   
   .custom-signup-button:hover {
-    background-color: #5b320f !important;
-    border-color: #5b320f !important;
+    background-color: #48290d !important;
+    border-color: #48290d !important;
   }
   

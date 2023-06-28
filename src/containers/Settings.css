@@ -19,6 +19,7 @@
     background-color: #1a1823 !important;
     border-color: #1a1823 !important;
     color: #fff;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
   }
   
   .customEmail:hover {
@@ -31,6 +32,7 @@
     background-color: #763f25e3;
     border-color: #763f25e3;
     color: #fff;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
   }
   
   .customPassword:hover {
