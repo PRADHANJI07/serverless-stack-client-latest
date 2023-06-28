@@ -10,6 +10,7 @@ import { Auth } from "aws-amplify";
 import { useNavigate, useLocation } from "react-router-dom";
 import { onError } from "./libs/errorLib";
 import config from "./config";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
@@ -95,10 +96,7 @@ function App() {
                       Settings
                     </Nav.Link>
                   </LinkContainer>
-                  <Nav.Link
-                    className="text-light"
-                    onClick={handleLogout}
-                  >
+                  <Nav.Link className="text-light" onClick={handleLogout}>
                     Logout
                   </Nav.Link>
                 </>
@@ -127,11 +125,13 @@ function App() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <AppContext.Provider
-          value={{ isAuthenticated, userHasAuthenticated }}
-        >
-          <Routes />
-        </AppContext.Provider>
+        <ErrorBoundary>
+          <AppContext.Provider
+            value={{ isAuthenticated, userHasAuthenticated }}
+          >
+            <Routes />
+          </AppContext.Provider>
+        </ErrorBoundary>
       </div>
     )
   );
