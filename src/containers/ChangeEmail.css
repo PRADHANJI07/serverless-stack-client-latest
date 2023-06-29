@@ -8,12 +8,17 @@
         max-width: 320px;
     }
 }
-.custom-change{
-    background-color: #232323 !important;
-    border-color: #232323 !important;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+
+.custom-change {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, #12414c, #0c292f);
+    border-color: #12414c !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }
-.custom-change:hover{
-    background-color: #32333a !important;
-    border-color: #32333a !important;
+
+.custom-change:hover {
+    background: linear-gradient(to bottom, #0c292f, #05171b);
+    border-color: #0c292f;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
 }

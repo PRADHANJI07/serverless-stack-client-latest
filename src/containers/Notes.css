@@ -4,13 +4,29 @@
 }
 
 .saveBtn {
-    background-color: #1a1823;
-    border-color: #1a1823;
-
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, #12414c, #0c292f);
+    border-color: #12414c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .saveBtn:hover {
-    color: #fff !important;
-    background-color: #32333a !important;
-    border-color: #32333a !important;
+    background: linear-gradient(to bottom, #0c292f, #05171b);
+    border-color: #0c292f;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
 }
+.customDel {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to bottom, #dc3545, #bb2c3c);
+    border-color: #dc3545;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .customDel:hover {
+    background: linear-gradient(to bottom, #bb2c3c, #9a2430);
+    border-color: #bb2c3c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+  }
+  

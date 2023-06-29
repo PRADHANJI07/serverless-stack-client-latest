@@ -36,7 +36,7 @@ export default function NewNote() {
     try {
       const attachment = file.current ? await s3Upload(file.current) : null;
       await createNote({ content, attachment });
-      navigate('/'); // Change history.push("/") to navigate('/')
+      navigate("/");
     } catch (e) {
       onError(e);
       setIsLoading(false);
@@ -45,7 +45,7 @@ export default function NewNote() {
 
   function createNote(note) {
     return API.post("notes", "/notes", {
-      body: note
+      body: note,
     });
   }
 
@@ -64,6 +64,7 @@ export default function NewNote() {
           <Form.Control onChange={handleFileChange} type="file" />
         </Form.Group>
         <LoaderButton
+          className="create-btn"
           block
           type="submit"
           size="lg"

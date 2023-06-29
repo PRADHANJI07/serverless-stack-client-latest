@@ -1,27 +1,28 @@
 /* Home.css */
 .Home .lander {
-  padding: 80px 0;
+  padding: 90px 0;
   text-align: center;
 }
 
 .Home .lander h1 {
-  font-family: 'Trykker', sans-serif;
+  font-family: 'Gloock', serif;
   font-weight: 600;
-  color: black;
-  font-size: 2.5rem;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); */
+  color: #fff;
+  font-size: 2.7rem;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
+
 
 .custom-app-description {
   display: inline-block;
-  color: black !important;
+  color: #fff !important;
   font-size: 1.3rem;
   overflow: hidden;
   white-space: nowrap;
-  margin: 0 auto;
-  width: 30%;
+ 
+  width: 45%;
   letter-spacing: .15em;
-  border-right: 3px solid;
+  
 
   animation: typing 3s steps(30) infinite, cursor .4s step-end infinite alternate;
   animation-delay: 5s, 8s;
@@ -42,36 +43,41 @@
 
 .custom-signup-button {
   font-family: 'Kanit', sans-serif;
-  background-color: #763f25e3;
+  background: linear-gradient(to bottom, #763f25e3, #5b320f);
   border-color: #763f25e3;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .custom-signup-button:hover {
   color: #fff !important;
-  background-color: #5b320f !important;
-  border-color: #5b320f !important;
+  background: linear-gradient(to bottom, #5b320f, #401d08);
+  border-color: #5b320f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
 .custom-login-button {
   font-family: 'Kanit', sans-serif;
-  background-color: #232323;
-  border-color: #232323;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to bottom, #12414c, #0c292f);
+  border-color: #12414c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .custom-login-button:hover {
-  background-color: #32333a;
-  border-color: #32333a;
+  background: linear-gradient(to bottom, #0c292f, #05171b);
+  border-color: #0c292f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
 }
+
 
 
 .Home .notes h2 {
   font-family: 'Kanit', sans-serif;
   text-align: center;
   margin: 0 auto;
-  font-size: 2rem;
-  color: #000;
+  font-size: 2.5rem;
+  color: #fff;
   /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
 }
 

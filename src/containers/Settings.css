@@ -1,42 +1,44 @@
 .Settings {
-    padding: 60px 0;
-    margin: 0 auto;
-    max-width: 480px;
-  }
-  
-  .Settings .LoaderButton {
-    width: 100%;
-    font-size: 16px;
-    padding: 8px 12px;
-  }
-  
-  .Settings .LoaderButton:first-child {
-    margin-bottom: 15px;
-  }
-  
-  .customEmail {
-    font-family: 'Kanit', sans-serif;
-    background-color: #1a1823 !important;
-    border-color: #1a1823 !important;
-    color: #fff;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
-  }
-  
-  .customEmail:hover {
-    background-color: #32333a !important;
-    border-color: #32333a !important;
-  }
-  
-  .customPassword {
-    font-family: 'Kanit', sans-serif;
-    background-color: #763f25e3;
-    border-color: #763f25e3;
-    color: #fff;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
-  }
-  
-  .customPassword:hover {
-    background-color: #5b320f;
-    border-color: #5b320f;
-  }
-  
+  padding: 60px 0;
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+.Settings .LoaderButton {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+.Settings .LoaderButton:first-child {
+  margin-bottom: 15px;
+}
+
+.customEmail {
+  font-family: 'Kanit', sans-serif;
+  background: linear-gradient(to bottom, #12414c, #0c292f);
+  border-color: #12414c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.customEmail:hover {
+  background: linear-gradient(to bottom, #0c292f, #05171b);
+  border-color: #0c292f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.customPassword {
+  font-family: 'Kanit', sans-serif;
+  background: linear-gradient(to bottom, #763f25e3, #5b320f);
+  border-color: #763f25e3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.customPassword:hover {
+  color: #fff !important;
+  background: linear-gradient(to bottom, #5b320f, #401d08);
+  border-color: #5b320f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+}
