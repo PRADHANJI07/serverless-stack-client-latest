@@ -31,3 +31,12 @@
 .navbar .nav-link.active {
   color: #000000 !important;
 }
+.footer {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}

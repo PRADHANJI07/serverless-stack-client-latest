@@ -11,6 +11,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { onError } from "./libs/errorLib";
 import config from "./config";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 function App() {
   const [isAuthenticated, userHasAuthenticated] = useState(false);
@@ -63,10 +64,11 @@ function App() {
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
   }
-
   function isActiveRoute(route) {
     return location.pathname === route;
   }
+
+  const showFooter = location.pathname === "/";
 
   return (
     !isAuthenticating && (
@@ -132,6 +134,27 @@ function App() {
             <Routes />
           </AppContext.Provider>
         </ErrorBoundary>
+        {showFooter && (
+          <footer className="footer">
+            <Navbar
+              bg="transparent"
+              expand="md"
+              className="navbar-curved justify-content-center"
+            >
+              <Nav>
+                <Nav.Link href="https://instagram.com/___pradhanji___?igshid=NGExMmI2YTkyZg==">
+                  <FaInstagram size={24} />
+                </Nav.Link>
+                <Nav.Link href="https://www.linkedin.com/in/bhabesh-pradhan-843008241">
+                  <FaLinkedin size={24} />
+                </Nav.Link>
+                <Nav.Link href="https://www.facebook.com/profile.php?id=100093999346351&mibextid=ZbWKwL">
+                  <FaFacebook size={24} />
+                </Nav.Link>
+              </Nav>
+            </Navbar>
+          </footer>
+        )}
       </div>
     )
   );
