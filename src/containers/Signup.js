@@ -6,7 +6,7 @@ import { useFormFields } from "../libs/hooksLib";
 import { Auth } from "aws-amplify";
 import { onError } from "../libs/errorLib";
 import "./Signup.css";
-import { FacebookLoginButton } from "react-social-login-buttons";
+// import { FacebookLoginButton } from "react-social-login-buttons";
 import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
@@ -69,9 +69,9 @@ export default function Signup() {
       setIsLoading(false);
     }
   }
-  function handleFbLogin() {
-    userHasAuthenticated(true);
-  }
+  // function handleFbLogin() {
+  //   userHasAuthenticated(true);
+  // }
 
   function renderConfirmationForm() {
     return (
@@ -147,9 +147,9 @@ export default function Signup() {
       {newUser === null ? renderForm() : renderConfirmationForm()}
       <hr />
       <div style={{  display: "flex", justifyContent: "center"}}>
-        <a href={`https://www.facebook.com/v13.0/dialog/oauth?client_id=1741782039633954&redirect_uri=${encodeURIComponent("https://bhabesh-notes.netlify.app/signup/callback")}`}>
+        {/* <a href={`https://www.facebook.com/v13.0/dialog/oauth?client_id=1741782039633954&redirect_uri=${encodeURIComponent("https://bhabesh-notes.netlify.app/signup/callback")}`}>
           <FacebookLoginButton size="small" onClick={handleFbLogin} />
-        </a>
+        </a> */}
       </div>
     </div>
   );

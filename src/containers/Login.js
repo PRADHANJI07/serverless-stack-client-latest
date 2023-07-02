@@ -6,7 +6,7 @@ import LoaderButton from "../components/LoaderButton";
 import { useAppContext } from "../libs/contextLib";
 import { useFormFields } from "../libs/hooksLib";
 import { onError } from "../libs/errorLib";
-import { FacebookLoginButton } from "react-social-login-buttons";
+// import { FacebookLoginButton } from "react-social-login-buttons";
 import "./Login.css";
 
 export default function Login() {
@@ -35,10 +35,10 @@ export default function Login() {
     }
   }
 
-  function handleFbLogin() {
-    // Perform the Facebook login action here
-    // You can customize this function based on your requirements
-  }
+  // function handleFbLogin() {
+  //   // Perform the Facebook login action here
+  //   // You can customize this function based on your requirements
+  // }
 
   return (
     <div className="Login">
@@ -79,7 +79,7 @@ export default function Login() {
             "https://bhabesh-notes.netlify.app/login/callback"
           )}`}
         >
-          <FacebookLoginButton size="small" onClick={handleFbLogin} />
+          {/* <FacebookLoginButton size="small" onClick={handleFbLogin} /> */}
         </a>
       </Form>
     </div>
