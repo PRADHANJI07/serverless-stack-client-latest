@@ -84,7 +84,7 @@ export default function Signup() {
             onChange={handleFieldChange}
             value={fields.confirmationCode}
           />
-          <Form.Text muted>Please check your email for the code.</Form.Text>
+          <Form.Text muted className="email-confirm">Please check your email for the code.</Form.Text>
         </Form.Group>
         <LoaderButton
           block
@@ -92,6 +92,7 @@ export default function Signup() {
           type="submit"
           isLoading={isLoading}
           disabled={!validateConfirmationForm()}
+          className="custom-signup-button"
         >
           Verify
         </LoaderButton>

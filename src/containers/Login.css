@@ -18,7 +18,7 @@
 .Custom-login-btn {
     font-family: 'Kanit', sans-serif;
     background: linear-gradient(to bottom, #12414c, #0c292f);
-    border-color: #12414c;
+    border-color: #12414c !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
 }
