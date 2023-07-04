@@ -18,11 +18,13 @@ function App() {
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
+  const [isHomeLanderPage, setIsHomeLanderPage] = useState(true); // Track the current page
 
   useEffect(() => {
     onLoad();
     loadFacebookSDK();
-  }, []);
+    setIsHomeLanderPage(location.pathname === "/"); // Update the page state
+  }, [location]);
 
   async function onLoad() {
     try {
@@ -64,6 +66,7 @@ function App() {
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
   }
+
   function isActiveRoute(route) {
     return location.pathname === route;
   }
@@ -134,7 +137,7 @@ function App() {
             <Routes />
           </AppContext.Provider>
         </ErrorBoundary>
-        {showFooter && (
+        {showFooter && isHomeLanderPage && (
           <footer className="footer">
             <Navbar
               bg="transparent"

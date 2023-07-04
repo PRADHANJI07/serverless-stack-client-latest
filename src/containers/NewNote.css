@@ -2,6 +2,7 @@
     height: 300px;
     font-size: 1.5rem;
 }
+
 .create-btn {
     font-family: 'Kanit', sans-serif;
     background: linear-gradient(to bottom, #12414c, #0c292f);
@@ -14,4 +15,13 @@
     background: linear-gradient(to bottom, #0c292f, #05171b);
     border-color: #0c292f;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.attachment-image {
+    margin-top: 10px;
+}
+
+.attachment-image img {
+    max-width: 200px;
+    max-height: 200px;
 }

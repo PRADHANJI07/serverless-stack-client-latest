@@ -9,7 +9,7 @@ body {
   background-image: url("Hand.jpg");
   background-size: cover;
   height: 100vh;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: center;
 }
 

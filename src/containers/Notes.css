@@ -1,5 +1,6 @@
 .Notes form textarea {
     height: 300px;
+    width:  100%;
     font-size: 1.5rem;
 }
 
@@ -28,5 +29,9 @@
     background: linear-gradient(to bottom, #bb2c3c, #9a2430);
     border-color: #bb2c3c;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
+  }
+  .attachment-image {
+    max-width: 300px; 
+    max-height: 300px; 
   }
   

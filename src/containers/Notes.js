@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { API, Storage } from "aws-amplify";
 import { onError } from "../libs/errorLib";
-import { Form } from "react-bootstrap";
+import { Form, Image } from "react-bootstrap";
 import LoaderButton from "../components/LoaderButton";
 import config from "../config";
 import "./Notes.css";
@@ -11,7 +11,7 @@ import { s3Upload } from "../libs/awsLib";
 export default function Notes() {
   const file = useRef(null);
   const { id } = useParams();
-  const navigate = useNavigate(); // Change from useHistory to useNavigate
+  const navigate = useNavigate();
   const [note, setNote] = useState(null);
   const [content, setContent] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -84,7 +84,7 @@ export default function Notes() {
         attachment: attachment || note.attachment,
       });
 
-      navigate('/');
+      navigate("/");
     } catch (e) {
       onError(e);
       setIsLoading(false);
@@ -97,7 +97,9 @@ export default function Notes() {
 
   async function handleDelete(event) {
     event.preventDefault();
-    const confirmed = window.confirm("Are you sure you want to delete this note?");
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this note?"
+    );
 
     if (!confirmed) {
       return;
@@ -107,7 +109,7 @@ export default function Notes() {
 
     try {
       await deleteNote();
-      navigate('/');
+      navigate("/");
     } catch (e) {
       onError(e);
       setIsDeleting(false);
@@ -128,15 +130,15 @@ export default function Notes() {
           <Form.Group controlId="file">
             <Form.Label className="custom">Attachment</Form.Label>
             {note.attachment && (
-              <p>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={note.attachmentURL}
-                >
-                  {formatFilename(note.attachment)}
-                </a>
-              </p>
+              <div>
+                <Image
+                  src={note.attachmentURL}
+                  alt={note.attachment}
+                  fluid
+                  className="attachment-image"
+                />
+                <p>{formatFilename(note.attachment)}</p>
+              </div>
             )}
             <Form.Control onChange={handleFileChange} type="file" />
           </Form.Group>
